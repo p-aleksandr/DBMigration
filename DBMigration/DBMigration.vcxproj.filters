@@ -59,5 +59,11 @@
     <ClInclude Include="CComparator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CDBObjectHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDBObjectHistoryWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,6 +8,8 @@
 class CDBObject
 {
 public:
+	CDBObject() = default;
+	CDBObject(CDBObject const& aSource) = default;
 	CDBObject(	DBObjectType		aType,
 				std::string_view	aName,
 				std::string_view	aValue="")	// тут надо подумать, возможно передавать std::variant или std::any если используется с++17
@@ -17,17 +19,6 @@ public:
 		, mName(aName)
 		, mValue(aValue)
 	{
-	}
-
-	virtual CDBObject* Clone()
-	{
-		auto ret = new CDBObject(	mType,
-									mName,
-									mValue);
-		for (auto Property : Properties)
-			ret->AddProperty(std::move(*Property.Clone()));
-
-		return ret;
 	}
 
 	template <typename T>
@@ -81,8 +72,8 @@ public:
 		
 private:
 	std::vector<CDBObject>	Properties;
-	DBObjectType			mType;
-	std::string_view		mName;
-	std::string_view		mValue;
+	DBObjectType			mType = DBObjectType::Undefined;
+	std::string_view		mName = "";
+	std::string_view		mValue = "";
 };
 

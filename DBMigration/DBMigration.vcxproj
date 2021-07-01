@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClInclude Include="CComparator.h" />
     <ClInclude Include="CDBObject.h" />
+    <ClInclude Include="CDBObjectHistory.h" />
+    <ClInclude Include="CDBObjectHistoryWrapper.h" />
     <ClInclude Include="CDBObjectStatusWrapper.h" />
     <ClInclude Include="CDBObjectSuccessors.h" />
     <ClInclude Include="DBObjectConstructor.h" />

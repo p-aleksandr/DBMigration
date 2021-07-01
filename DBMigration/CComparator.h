@@ -15,7 +15,6 @@ public:
 		if (aOldObject == nullptr)
 			return CDBObjectStatusNewWrapper(aNewObject);
 		
-
 		if ((*aNewObject) == (*aOldObject))
 			ret = CDBObjectStatusSameWrapper(aNewObject);
 		else

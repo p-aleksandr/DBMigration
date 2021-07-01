@@ -4,6 +4,7 @@ enum class DBObjectType
 	Property = 0,
 	Field,
 	Index,
-	Table
+	Table,
+	Undefined
 };
 
